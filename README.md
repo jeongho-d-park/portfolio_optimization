@@ -29,12 +29,13 @@ This repository contains:
 ## 🧮 Methodology
 
 1. Download historical adjusted close prices using `yfinance`
-2. Compute daily returns and covariance matrix
-3. Optimize for the minimum variance portfolio with constraints:
+2. When 'Adj Close' is not pulled properly, use yfinance.Ticker.history() to pull adjusted close prices
+3. Compute daily  returns and covariance matrix
+4. Optimize for the minimum variance portfolio with constraints:
    - Total weights sum to 1
    - No short selling (weights between 0 and 1)
-4. Simulate 5,000 random portfolios to visualize the efficient frontier
-5. Compare optimized portfolios to randomly generated ones
+5. Simulate 5,000 random portfolios to visualize the efficient frontier
+6. Compare optimized portfolios to randomly generated ones
 
 ---
 
@@ -45,13 +46,13 @@ The following plot shows 5,000 randomly simulated portfolios, with the optimized
 ![Efficient Frontier](https://github.com/jeongho-d-park/portfolio_optimization/raw/main/output.png)
 
 - Minimum Variance Portfolio:
-AAPL	0.0991
-MSFT	0.2869
-JNJ	    0.0054
-JPM	    0.0648
-PG	    0.2860
-XOM	    0.0896
-TSLA	0.1682
+AAPL	0.1097
+MSFT	0.0072
+JNJ	0.3526
+JPM	0.0650
+PG	   0.2751
+XOM	0.0981
+TSLA	0.0924
 
 ---
 
